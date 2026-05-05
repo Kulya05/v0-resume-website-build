@@ -1,0 +1,84 @@
+"use client";
+
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Award, GraduationCap } from "lucide-react";
+
+const education = [
+  {
+    type: "degree",
+    title: "BSc — Cloud Applications Programming",
+    institution: "WSB Merito Wroclaw",
+    period: "2023 – Present (Year 3)",
+    highlights: [
+      "Core curriculum: cloud architecture, databases (SQL + NoSQL), DevOps, containerisation, security",
+      "Azure platform studied in depth (the full service stack)",
+      "LLM & AI: actively self-studying transformer architecture, context window mechanics, prompt engineering patterns",
+    ],
+  },
+  {
+    type: "certification",
+    title: "Salesforce Developer — Certified Course",
+    institution: "Synebo + Course Tutor",
+    period: "2025",
+    highlights: [
+      "Backend with Apex, frontend with Lightning Web Components",
+      "Component-based architecture directly transferable to React/Vue patterns",
+      "Tutored course participants — knowledge transfer, communication, collaborative problem-solving",
+    ],
+  },
+];
+
+export function Education() {
+  return (
+    <section id="education" className="py-16 md:py-24">
+      <div className="container mx-auto px-4">
+        <div className="mb-12 text-center">
+          <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+            Education & Training
+          </h2>
+          <p className="mx-auto max-w-2xl text-muted-foreground">
+            Continuous learning with a focus on cloud and AI technologies
+          </p>
+        </div>
+
+        <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
+          {education.map((item, index) => (
+            <Card
+              key={index}
+              className="group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5"
+            >
+              <CardHeader>
+                <div className="mb-2 flex items-center gap-2">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                    {item.type === "degree" ? (
+                      <GraduationCap className="h-5 w-5 text-primary" />
+                    ) : (
+                      <Award className="h-5 w-5 text-primary" />
+                    )}
+                  </div>
+                  <Badge variant="secondary" className="text-xs capitalize">
+                    {item.type}
+                  </Badge>
+                </div>
+                <CardTitle className="text-lg">{item.title}</CardTitle>
+                <p className="font-medium text-primary">{item.institution}</p>
+                <p className="text-sm text-muted-foreground">{item.period}</p>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2">
+                  {item.highlights.map((highlight, hIndex) => (
+                    <li key={hIndex} className="flex gap-2 text-sm text-muted-foreground">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />
+                      <span className="leading-relaxed">{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
