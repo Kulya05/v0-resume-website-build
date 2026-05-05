@@ -15,7 +15,7 @@ export function Hero() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center gap-8 text-center">
           <Avatar className="h-32 w-32 border-4 border-primary/20 shadow-xl ring-4 ring-background transition-transform duration-300 hover:scale-105 md:h-40 md:w-40">
-            <AvatarImage src="/profile.jpg" alt="Artem Kulinich" />
+            <AvatarImage src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-MQqifT0TJ0gU4v4JO1WMlD8iFyqWNk.png" alt="Artem Kulinich" />
             <AvatarFallback className="bg-primary text-2xl font-bold text-primary-foreground md:text-3xl">
               AK
             </AvatarFallback>
