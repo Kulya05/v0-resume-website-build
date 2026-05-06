@@ -18,13 +18,13 @@ const contactLinks = [
   },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com/in/artem-kulinich",
+    href: "https://www.linkedin.com/in/artem-kulinich-3ab6482a9/",
     icon: Linkedin,
     label: "LinkedIn Profile",
   },
   {
     name: "GitHub",
-    href: "https://github.com/artemkulinich",
+    href: "https://github.com/Kulya05",
     icon: Github,
     label: "GitHub Profile",
   },
