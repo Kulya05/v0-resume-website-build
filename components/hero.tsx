@@ -1,8 +1,11 @@
 "use client";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Download, Mail, MapPin, Phone } from "lucide-react";
+import { Download, Github, Globe, Mail, MapPin, Phone } from "lucide-react";
+
+const techStack = ["JavaScript", "React", "Vue", "CSS/SCSS", "AI-Native"];
 
 export function Hero() {
   return (
@@ -26,17 +29,21 @@ export function Hero() {
               Artem Kulinich
             </h1>
             <p className="text-xl font-medium text-primary md:text-2xl">
-              Junior AI-First Developer
+              Frontend Developer
             </p>
-            <p className="text-muted-foreground">
-              Monterail | Wroclaw / Remote
-            </p>
+            <div className="flex flex-wrap items-center justify-center gap-2">
+              {techStack.map((tech) => (
+                <Badge key={tech} variant="secondary" className="text-sm">
+                  {tech}
+                </Badge>
+              ))}
+            </div>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground">
             <span className="flex items-center gap-1.5">
               <MapPin className="h-4 w-4" />
-              Wroclaw, Poland
+              {"Wroclaw, Poland"}
             </span>
             <span className="flex items-center gap-1.5">
               <Phone className="h-4 w-4" />
@@ -48,8 +55,30 @@ export function Hero() {
             </span>
           </div>
 
-          <p className="max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-            {"Cloud Applications Engineering student who builds with AI — not just alongside it. I've shipped a production e-commerce platform solo, written automation scripts that replaced hours of manual work, and I obsessively explore how AI changes the way software gets built."}
+          <div className="flex flex-wrap items-center justify-center gap-3 text-sm">
+            <a
+              href="https://monterail-cv-page.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-muted-foreground transition-colors hover:text-primary"
+            >
+              <Globe className="h-4 w-4" />
+              Portfolio
+            </a>
+            <span className="text-muted-foreground/50">|</span>
+            <a
+              href="https://github.com/Kulya05"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-muted-foreground transition-colors hover:text-primary"
+            >
+              <Github className="h-4 w-4" />
+              GitHub
+            </a>
+          </div>
+
+          <p className="max-w-3xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
+            {"Frontend developer who ships production interfaces and builds with AI as a core engineering tool. I have delivered real products end-to-end — a full e-commerce storefront, a live interactive web app deployed on Vercel, and an AI-powered backend microservice. I write clean, reusable, cross-browser compatible code with strong UX intuition built through shipping to real users."}
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">

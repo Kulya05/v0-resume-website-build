@@ -9,9 +9,9 @@ const experiences = [
     location: "Wroclaw",
     period: "Apr 2025 – Present",
     achievements: [
-      "Production AI tooling — built and shipped automation scripts in a real business environment. Claude and Copilot used as core engineering tools.",
-      "Cross-functional collaboration in a logistics environment — communicating technical solutions to non-technical stakeholders daily.",
-      "Data integrity and compliance at scale — large-volume inventory management with zero-error standards, building the discipline that production-grade software requires.",
+      "Applied AI-assisted development (Claude, GitHub Copilot) to build Python automation tools used in production — demonstrating the ship-first mindset.",
+      "Cross-functional collaboration and written communication in English daily — client-facing experience in an international corporate environment.",
+      "Data integrity and compliance at scale — large-volume inventory management with zero-error standards.",
     ],
   },
 ];
@@ -25,7 +25,7 @@ export function Experience() {
             Work Experience
           </h2>
           <p className="mx-auto max-w-2xl text-muted-foreground">
-            Building real-world solutions with AI-first approach
+            Building real-world solutions with modern technologies
           </p>
         </div>
 
