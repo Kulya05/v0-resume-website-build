@@ -10,11 +10,11 @@ const projects = [
     title: "Interactive CV Web App",
     subtitle: "Solo Project",
     period: "2025",
-    tech: ["React", "HTML", "CSS", "Vercel"],
-    liveUrl: "https://monterail-cv-page.vercel.app",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+    liveUrl: "https://v0-resume-website-build.vercel.app",
     highlights: [
       "Built and deployed a production-grade interactive single-page web app on Vercel — smooth-scroll navigation, structured responsive sections, cross-device compatible.",
-      "Frontend built with React and CSS with strong attention to layout precision, spacing rhythm, and responsive behaviour across viewports.",
+      "Frontend built with Next.js, React and Tailwind CSS with strong attention to layout precision, spacing rhythm, and responsive behaviour across viewports.",
       "Demonstrates the ability to take a design idea and implement it as a performant, standards-compliant frontend independently.",
     ],
   },
@@ -23,6 +23,7 @@ const projects = [
     subtitle: "Full Frontend + Integrations",
     period: "2025 – Present",
     tech: ["JavaScript", "Liquid", "CSS", "REST APIs", "Shopify"],
+    liveUrl: "https://0csg6b-b0.myshopify.com",
     highlights: [
       "Built a full production storefront from scratch — custom JavaScript components, Liquid templates, CSS animations, third-party REST API integrations (cart, upsell, payments).",
       "Every UI element built with cross-browser compatibility, responsive design, and performance as first-class requirements. W3C-valid markup throughout.",
