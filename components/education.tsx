@@ -10,21 +10,22 @@ const education = [
     title: "BSc — Cloud Applications Programming",
     institution: "WSB Merito Wroclaw",
     period: "2023 – Present (Year 3)",
+    note: "EU citizen, full-time eligible",
     highlights: [
-      "Core curriculum: cloud architecture, databases (SQL + NoSQL), DevOps, containerisation, security",
-      "Azure platform studied in depth (the full service stack)",
-      "LLM & AI: actively self-studying transformer architecture, context window mechanics, prompt engineering patterns",
+      "Core curriculum: web technologies, cloud architecture, databases, DevOps, system security",
+      "Minimum Bachelor's degree requirement met — final year of CS-related engineering programme",
+      "Permanent residency in Poland (EU), full-time employment only",
     ],
   },
   {
     type: "certification",
-    title: "Salesforce Developer — Certified Course",
-    institution: "Synebo + Course Tutor",
-    period: "2025",
+    title: "Salesforce Developer — Certified + Tutor",
+    institution: "Synebo",
+    period: "2024",
     highlights: [
-      "Backend with Apex, frontend with Lightning Web Components",
-      "Component-based architecture directly transferable to React/Vue patterns",
-      "Tutored course participants — knowledge transfer, communication, collaborative problem-solving",
+      "Lightning Web Components (frontend) and Apex (backend) — component-based UI architecture directly analogous to React/Vue patterns",
+      "Contributed to open source tooling exploration and documented findings",
+      "Experience with open source development culture",
     ],
   },
 ];
@@ -38,7 +39,7 @@ export function Education() {
             Education & Training
           </h2>
           <p className="mx-auto max-w-2xl text-muted-foreground">
-            Continuous learning with a focus on cloud and AI technologies
+            Continuous learning with a focus on web technologies and cloud
           </p>
         </div>
 
@@ -64,6 +65,9 @@ export function Education() {
                 <CardTitle className="text-lg">{item.title}</CardTitle>
                 <p className="font-medium text-primary">{item.institution}</p>
                 <p className="text-sm text-muted-foreground">{item.period}</p>
+                {item.note && (
+                  <p className="text-xs text-muted-foreground/80">{item.note}</p>
+                )}
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">

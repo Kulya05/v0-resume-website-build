@@ -3,87 +3,90 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
+  Accessibility,
   Bot,
-  Brain,
-  Cloud,
+  Box,
   Code2,
+  Container,
   FileCode,
+  Figma,
   GitBranch,
   Globe,
-  Lightbulb,
+  Languages,
   MessageSquare,
-  Sparkles,
   Terminal,
-  Zap,
 } from "lucide-react";
+
+const frontendSkills = [
+  {
+    name: "HTML5 / CSS3 / SCSS",
+    description: "Semantic markup, BEM, responsive layouts, animations, cross-browser — production-grade",
+    icon: FileCode,
+  },
+  {
+    name: "JavaScript (ES6+)",
+    description: "Async/await, modules, DOM manipulation, event handling, REST API integration",
+    icon: Code2,
+  },
+  {
+    name: "React",
+    description: "Functional components, hooks, state management, Vercel deployment — live projects",
+    icon: Globe,
+  },
+  {
+    name: "Vue.js",
+    description: "Familiar with component model and reactivity system — studied for projects",
+    icon: Globe,
+  },
+  {
+    name: "W3C / Accessibility",
+    description: "Standards-compliant markup, WCAG awareness, semantic HTML, ARIA basics",
+    icon: Accessibility,
+  },
+  {
+    name: "Design Collaboration",
+    description: "Figma — working with designers, extracting specs, implementing pixel-perfect UI",
+    icon: Figma,
+  },
+];
+
+const backendDevOps = [
+  {
+    name: "Git",
+    description: "Version control daily — branches, PRs, collaborative workflows, GitHub Actions CI/CD",
+    icon: GitBranch,
+  },
+  {
+    name: "Node.js / Python",
+    description: "Backend experience — NestJS microservices, Python automation scripts, REST API design",
+    icon: Terminal,
+  },
+  {
+    name: "Build Tools / Deploy",
+    description: "Docker, Docker Compose, GitHub Actions, Vercel — full deployment pipeline experience",
+    icon: Container,
+  },
+];
 
 const aiToolkit = [
   {
-    name: "Claude / Claude Code",
-    description: "Daily driver — prompting, context management, code generation, agentic workflows",
+    name: "AI / LLM APIs",
+    description: "Anthropic API, OpenAI API — direct integration in production; Claude Code, Cursor daily",
     icon: Bot,
-  },
-  {
-    name: "Anthropic API",
-    description: "Direct API integration — message construction, system prompts, streaming",
-    icon: MessageSquare,
-  },
-  {
-    name: "OpenAI / Codex",
-    description: "Code generation, completion, embedding exploration",
-    icon: Sparkles,
   },
   {
     name: "AI-Assisted Dev",
     description: "Agentic coding loops: plan → generate → test → refine",
-    icon: Zap,
-  },
-  {
-    name: "Prototyping",
-    description: "Concept → working prototype workflow — rapid iteration",
-    icon: Lightbulb,
-  },
-  {
-    name: "LLM Understanding",
-    description: "Prompt engineering, context windows, temperature/top-p intuition",
-    icon: Brain,
+    icon: MessageSquare,
   },
 ];
 
-const devSkills = [
-  {
-    name: "JavaScript / React",
-    description: "ES6+, component architecture, hooks, async",
-    icon: Code2,
-  },
-  {
-    name: "HTML / CSS",
-    description: "Production-grade UI with custom components",
-    icon: FileCode,
-  },
-  {
-    name: "REST APIs",
-    description: "Integration, authentication, webhook flows",
-    icon: Globe,
-  },
-  {
-    name: "Python",
-    description: "Automation scripts, data pipelines, workflow tools",
-    icon: Terminal,
-  },
-  {
-    name: "Git / DevOps",
-    description: "Version control, CI/CD concepts, Azure DevOps",
-    icon: GitBranch,
-  },
-  {
-    name: "Cloud",
-    description: "Azure platform, GCP fundamentals, Vercel",
-    icon: Cloud,
-  },
+const otherSkills = [
+  { name: "English C1", icon: Languages },
+  { name: "International Teams", icon: Box },
+  { name: "Client-Facing Communication", icon: MessageSquare },
+  { name: "Technical Documentation", icon: FileCode },
 ];
-
-const otherSkills = ["English C1", "International Teams", "Cross-functional Collaboration", "Rapid Learning"];
 
 export function Skills() {
   return (
@@ -91,21 +94,21 @@ export function Skills() {
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            Skills & Expertise
+            Tech Stack
           </h2>
           <p className="mx-auto max-w-2xl text-muted-foreground">
-            Building with AI as a core development partner, not just a tool
+            Building production-grade frontends with modern tools and AI-assisted workflows
           </p>
         </div>
 
-        {/* AI-First Toolkit */}
+        {/* Frontend Skills */}
         <div className="mb-12">
           <h3 className="mb-6 flex items-center gap-2 text-xl font-semibold text-foreground">
-            <Bot className="h-5 w-5 text-primary" />
-            AI-First Toolkit
+            <Code2 className="h-5 w-5 text-primary" />
+            Frontend Development
           </h3>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {aiToolkit.map((skill) => (
+            {frontendSkills.map((skill) => (
               <Card
                 key={skill.name}
                 className="group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5"
@@ -124,14 +127,40 @@ export function Skills() {
           </div>
         </div>
 
-        {/* Development Skills */}
+        {/* Backend & DevOps */}
         <div className="mb-12">
           <h3 className="mb-6 flex items-center gap-2 text-xl font-semibold text-foreground">
-            <Code2 className="h-5 w-5 text-primary" />
-            Development Skills
+            <Terminal className="h-5 w-5 text-primary" />
+            Backend & DevOps
           </h3>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {devSkills.map((skill) => (
+          <div className="grid gap-4 md:grid-cols-3">
+            {backendDevOps.map((skill) => (
+              <Card
+                key={skill.name}
+                className="group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5"
+              >
+                <CardHeader className="pb-2">
+                  <CardTitle className="flex items-center gap-2 text-base font-medium">
+                    <skill.icon className="h-5 w-5 text-primary transition-transform duration-300 group-hover:scale-110" />
+                    {skill.name}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">{skill.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* AI Toolkit */}
+        <div className="mb-12">
+          <h3 className="mb-6 flex items-center gap-2 text-xl font-semibold text-foreground">
+            <Bot className="h-5 w-5 text-primary" />
+            AI-Native Development
+          </h3>
+          <div className="grid gap-4 md:grid-cols-2">
+            {aiToolkit.map((skill) => (
               <Card
                 key={skill.name}
                 className="group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5"
@@ -156,11 +185,12 @@ export function Skills() {
           <div className="flex flex-wrap gap-2">
             {otherSkills.map((skill) => (
               <Badge
-                key={skill}
+                key={skill.name}
                 variant="secondary"
-                className="px-4 py-2 text-sm transition-all duration-300 hover:bg-primary hover:text-primary-foreground"
+                className="flex items-center gap-1.5 px-4 py-2 text-sm transition-all duration-300 hover:bg-primary hover:text-primary-foreground"
               >
-                {skill}
+                <skill.icon className="h-3.5 w-3.5" />
+                {skill.name}
               </Badge>
             ))}
           </div>
