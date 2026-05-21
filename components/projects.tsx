@@ -11,7 +11,7 @@ const projects = [
     subtitle: "Solo Project",
     period: "2025",
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
-    liveUrl: "https://v0-resume-website-build.vercel.app",
+    liveUrl: "https://v0-resume-website-build-kuaswtxly-kulya05s-projects.vercel.app",
     highlights: [
       "Built and deployed a production-grade interactive single-page web app on Vercel — smooth-scroll navigation, structured responsive sections, cross-device compatible.",
       "Frontend built with Next.js, React and Tailwind CSS with strong attention to layout precision, spacing rhythm, and responsive behaviour across viewports.",
